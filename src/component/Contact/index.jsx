@@ -6,7 +6,7 @@ function Contact() {
     <Box
       sx={{
         my: { xs: 5, md: 10 },
-        mx: { xs: 0, md: 10 },
+        mx: { xs: 2, md: 10 },
         py: { xs: 1, md: 10 },
         backgroundColor: "#E10000",
         borderRadius: "15px",

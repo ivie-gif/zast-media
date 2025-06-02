@@ -2,6 +2,7 @@ import * as React from "react";
 import { Box, Grid, Typography, Button, Divider } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Money from "../../assets/money.jpg";
+import ReusableModal from "../../reusables/modal";
 
 const Pricing = [
   {
@@ -51,6 +52,15 @@ const Pricing = [
 ];
 
 function NewPricingSection() {
+
+const [open, setOpen] = React.useState(false);
+
+
+const handleModal = () => {
+  setOpen(true);
+}
+
+
   return (
     <Box
       sx={{
@@ -153,9 +163,11 @@ function NewPricingSection() {
                   <Typography variant="body2" sx={{pb: 1}}>{item.ip}</Typography>
                   <Typography variant="body2" sx={{pb: 1}}>{item.calls}</Typography>
                   <Typography variant="body2" sx={{pb: 1}}>{item.care}</Typography>
+                 
                   <Button
                     fullWidth
                     variant="contained"
+                    onClick={handleModal}
                     sx={{
                       mt: 3,
                       backgroundColor: "#E10000",
@@ -175,6 +187,13 @@ function NewPricingSection() {
           </Grid>
         </Grid>
       </Grid>
+      <ReusableModal
+        open={open}
+        onClose={() => setOpen(false)}
+        title="Modal Title"
+        description="Optional description text here"
+        width={500}
+      />
     </Box>
   );
 }

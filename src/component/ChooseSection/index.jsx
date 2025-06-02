@@ -74,7 +74,7 @@ function ChooseSection() {
                 backgroundColor: "#000000",
                 width: { xs: "10%", md: "8%" },
                 height: { xs: "3px", md: "3px" },
-                marginTop: { xs: 10, md: 10 },
+                marginTop: { xs: 8, md: 10 },
                 marginX: { xs: 4, md: 10 },
               }}
             />
@@ -95,7 +95,7 @@ function ChooseSection() {
               <CheckCircleIcon sx={{ color: "#E10000", fontSize: "15px" }} />
             </Typography>
 
-            <Grid container spacing={2} sx={{ paddingX: { xs: 1, md: 5 } }}>
+            <Grid container spacing={2} sx={{ paddingX: { xs: 3, md: 5 } }}>
               <Grid item size={{ xs: 12, md: 6 }}>
                 <Grid container sx={{ mb: 5 }}>
                   <Grid>
