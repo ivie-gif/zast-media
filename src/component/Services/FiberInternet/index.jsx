@@ -29,20 +29,21 @@ function FiberInternet() {
             <Box
               sx={{
                 backgroundColor: "#FFF0F0",
-                width: 40,
-                height: 40,
+                width: 30,
+                height: 30,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: "50%",
                 mr: 2,
+                p: 1,
               }}
             >
               <DoneOutlineIcon sx={{ color: "#E10000" }} />
             </Box>
             <Typography
               variant="h6"
-              sx={{ fontWeight: 700, color: "#0D3E9B", mb: 0, textAlign: "left" }}
+              sx={{ fontWeight: 700, color: "#000000", mb: 0, textAlign: "left" }}
             >
               {item.title}
             </Typography>

@@ -89,7 +89,7 @@ function HeroSection() {
             mb: 2,
           }}
         >
-          Digital Media Agency
+          Zast-Media
         </Typography>
 
         <Typography

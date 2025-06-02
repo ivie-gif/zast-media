@@ -117,9 +117,6 @@ function NewPricingSection() {
               </Typography>
               <ArrowForwardIcon sx={{ fontSize: 30 }} />
             </Box>
-            {/* <Box sx={{ mt: -12 }}>
-              <img src={Money} alt="Pricing" style={{ width: "100%", borderRadius: 8, height: "100%" }} />
-            </Box> */}
           </Box>
         </Grid>
 

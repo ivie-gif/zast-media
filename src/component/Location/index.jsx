@@ -37,7 +37,7 @@ function Location() {
           left: 0,
           width: "100%",
           height: { xs: "100%", md: "100vh" },
-          backgroundColor: "rgba(0, 32, 63, 0.85)",
+          backgroundColor: "rgba(5, 5, 5, 0.85)",
           zIndex: 1,
           py: { md: 0 },
         }}

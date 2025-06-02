@@ -23,7 +23,6 @@ function Services() {
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(false);
 
-  // Update arrow visibility based on scroll position
   const updateScrollButtons = () => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -35,12 +34,10 @@ function Services() {
 
   React.useEffect(() => {
     updateScrollButtons();
-    // Update on resize
     window.addEventListener("resize", updateScrollButtons);
     return () => window.removeEventListener("resize", updateScrollButtons);
   }, []);
 
-  // Also update on scroll of the container
   React.useEffect(() => {
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -49,7 +46,7 @@ function Services() {
     return () => container.removeEventListener("scroll", updateScrollButtons);
   }, []);
 
-  const scrollAmount = 360; // px to scroll per arrow click
+  const scrollAmount = 360; 
 
   const handlePrev = () => {
     if (scrollContainerRef.current) {
@@ -72,7 +69,6 @@ function Services() {
   return (
     <Box
       sx={{
-        // my: 10,
         background: `url(${FooterNewImage})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -153,7 +149,6 @@ function Services() {
           overflowX: "auto",
           scrollBehavior: "smooth",
           gap: -12,
-          // px: 1,
           "&::-webkit-scrollbar": { display: "none" },
           "-ms-overflow-style": "none",
           "scrollbar-width": "none",
@@ -163,10 +158,9 @@ function Services() {
           <Box
             key={label}
             sx={{
-              minWidth: 200, // fixed width for each card
+              minWidth: 200, 
               flexShrink: 0,
               marginX: -12,
-              // border: "1px solid #D9D9D9",
             }}
             aria-label={label}
           >

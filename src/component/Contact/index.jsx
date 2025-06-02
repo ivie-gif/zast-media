@@ -33,13 +33,13 @@ function Contact() {
           <Button
             sx={{
               my: 3,
-              backgroundColor: "#1E1278",
+              backgroundColor: "rgba(5, 5, 5, 0.85)",
               color: "#fff",
               px: 3,
               borderRadius: "25px",
               py: { xs: 1, md: 1 },
               "&:hover": {
-                color: "#1E1278",
+                color: "rgba(5, 5, 5, 0.85)",
                 backgroundColor: "#fff",
                 fontSize: { xs: "16px", md: "20px" },
               },
