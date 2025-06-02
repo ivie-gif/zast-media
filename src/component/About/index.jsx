@@ -3,18 +3,19 @@ import { Box, Typography, Divider, Grid, Button } from "@mui/material";
 import HeroImage from "../../assets/about.jpg";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import AboutBG from "../../assets/hero-bg-left.jpg";
+import CenteredPageLayout from "../Layout";
 
 function About() {
   return (
-    <Box>
-      <Box
-        sx={{
-          pt: { xs: 1, md: 1 },
-          mt: { xs: 1, md: 10 },
-          backgroundImage: `url(${AboutBG})`,
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+    <Box
+      sx={{
+        pt: { xs: 1, md: 1 },
+        mt: { xs: 1, md: 10 },
+        backgroundImage: `url(${AboutBG})`,
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      
         <Divider
           orientation="horizontal"
           flexItem
@@ -34,7 +35,7 @@ function About() {
             mx: { xs: 3, md: 10 },
             fontSize: { xs: "25px", md: "42px" },
             fontWeight: 900,
-            color: "#E10000", 
+            color: "#E10000",
           }}
         >
           About Us
@@ -51,7 +52,7 @@ function About() {
                   pt: 2,
                   lineHeight: "30px",
                   fontWeight: 300,
-                  color: "#444", 
+                  color: "#444",
                   textAlign: "left",
                   mb: 2,
                 }}
@@ -130,7 +131,6 @@ function About() {
             </Box>
           </Grid>
         </Grid>
-      </Box>
     </Box>
   );
 }

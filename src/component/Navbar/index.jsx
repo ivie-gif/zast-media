@@ -18,6 +18,8 @@ import { Grid } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import Logo from "../../assets/logo.png";
+
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Services", "Contact"];
@@ -32,18 +34,14 @@ function DrawerAppBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "left" }}>
-      <Typography
-        variant="h6"
+      <Box
         sx={{
-          my: 2,
-          textAlign: "left",
+          pt: 2,
           mx: 2,
-          color: "#2A2A2A",
-          "&:hover": { color: "#78BBED" },
         }}
       >
-        ZAST MEDIA
-      </Typography>
+        <img src={Logo} alt="logo" loading="lazy" width={80} height={70}/>
+      </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -150,19 +148,18 @@ function DrawerAppBar(props) {
             >
               <MenuIcon sx={{ color: "#000000" }} />
             </IconButton>
-            <Typography
-              variant="h6"
-              component="div"
+            <Box
               sx={{
                 flexGrow: 1,
+                pt: { xs: 2, md: 1 },
                 display: { xs: "block", sm: "block" },
                 textAlign: "left",
                 color: "#0D3E9B",
                 "&:hover": { color: "#E10000" },
               }}
             >
-              ZAST MEDIA
-            </Typography>
+              <img src={Logo} alt="logo" loading="lazy" width={80} height={70}/>
+            </Box>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
                 <Button

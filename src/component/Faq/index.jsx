@@ -9,6 +9,7 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import CenteredPageLayout from "../Layout";
 
 function Faq() {
   const faqs = [
@@ -39,7 +40,6 @@ function Faq() {
   ];
 
   return (
-    // <Box sx={{ backgroundColor: "#000000", pt: 10, pb: 20 }}>
     <Box sx={{ backgroundColor: "#D9D9D9", pt: 10, pb: 20 }}>
       <Divider
         orientation="horizontal"

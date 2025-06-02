@@ -12,6 +12,7 @@ import CheckIcon from "@mui/icons-material/Check";
 import Button from "@mui/material/Button";
 import WovenImageList from "../../reusables";
 import Fiber from "../../assets/fiber.jpg";
+import CenteredPageLayout from "../Layout";
 
 function ChooseSection() {
   return (
@@ -24,7 +25,7 @@ function ChooseSection() {
           backgroundColor: "#E10000",
           borderRadius: "15px",
         }}
-      >
+        >
         <Grid container sx={{ px: { xs: 2, md: 0 } }}>
           <Grid item size={{ xs: 12, md: 6 }}>
             <Typography
@@ -54,15 +55,14 @@ function ChooseSection() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                mx: { xs: 3, md: 35 },
+                mx: { xs: 3, md: 25 },
               }}
             >
               <img src={Fiber} alt="fiber" loading="lazy" />
             </Box>
           </Grid>
         </Grid>
-      </Box>
-
+        </Box>
       <Grid container direction="row-reverse">
         <Grid size={{ xs: 12, md: 6 }} sx={{ backgroundColor: "#FBFAF8" }}>
           <Box>
@@ -315,7 +315,6 @@ function ChooseSection() {
         </Grid>
       </Grid>
     </Box>
-    // </Box>
   );
 }
 

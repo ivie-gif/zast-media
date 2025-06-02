@@ -3,6 +3,7 @@ import { Box, Grid, Typography, Button, Divider } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Money from "../../assets/money.jpg";
 import ReusableModal from "../../reusables/modal";
+import CenteredPageLayout from "../Layout";
 
 const Pricing = [
   {

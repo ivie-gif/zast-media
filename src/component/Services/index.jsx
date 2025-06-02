@@ -2,6 +2,7 @@ import * as React from "react";
 import { Box, Divider, Typography, IconButton, Grid } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CenteredPageLayout from "../Layout";
 
 import FTTH from "./FTTH";
 import CommunicationServices from "./CommSolution";
@@ -68,11 +69,11 @@ function Services() {
 
   return (
     <Box
-      sx={{
-        background: `url(${FooterNewImage})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
+    sx={{
+      background: `url(${FooterNewImage})`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "cover",
+    }}
     >
       <Grid
         container

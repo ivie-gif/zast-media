@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Box, Typography, Button, Grid, Divider } from "@mui/material";
+import { Box, Typography, Grid, Divider } from "@mui/material";
 import LocationBG from "../../assets/lagos-location.jpg";
+import CenteredPageLayout from "../Layout";
 
 function Location() {
   const locations = [

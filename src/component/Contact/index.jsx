@@ -8,7 +8,7 @@ function Contact() {
         my: { xs: 5, md: 10 },
         mx: { xs: 2, md: 10 },
         py: { xs: 1, md: 10 },
-        backgroundColor: "#E10000",
+        backgroundColor: "#B80000",
         borderRadius: "15px",
         height: { xs: "100%", md: "0" },
       }}
