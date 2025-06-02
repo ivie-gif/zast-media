@@ -1,10 +1,10 @@
 import * as React from "react";
 import { Typography, Box,  } from "@mui/material";
-import FooterImage from "../../assets/footer.png";
+import FooterNewImage from "../../assets/footer-new.png";
 
 function Footer() {
   return (
-    <Box sx={{ background: `url(${FooterImage})`, backgroundSize: "cover", borderTop: "2px solid #501060" }}>
+    <Box sx={{ background: `url(${FooterNewImage})`, backgroundSize: "cover", borderTop: "2px solid #501060" }}>
       {/* <Grid container spacing={30} sx={{ px: { xs: 1, md: 10 }, pt: 10, pb: 5 }}>
         <Grid
           item

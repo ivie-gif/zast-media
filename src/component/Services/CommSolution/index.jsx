@@ -1,77 +1,57 @@
 import * as React from "react";
-import { Box, Divider, Typography, Grid, Button } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import communication from "../../../assets/communication.jpg";
+import { Box, Typography, Paper } from "@mui/material";
+import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 
 function CommunicationServices() {
-
+  const items = [
+    {
+      title: "Communication & Voice Services (Digital Land Lines)",
+      features:
+        "Our voice communication solution is tailored to meet your operational and customer service needs. Our solution aims to enhance communication capabilities, improve customer interactions, and reduce operational costs through modern, scalable voice technologies."
+       },
+  ];
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "red",
-        py: { xs: 3, md: 8 },
-        // backgroundImage: `url(${BgPricing})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        borderRadius: "10px",
-        mx: { xs: 1, md: 5 },
-        mt: { xs: 5, md: 8 },
-      }}
-    >
-      <Grid
-        container
-        spacing={2}
-        sx={{
-          px: { xs: 3, md: 10 },
-          py: { xs: 3, md: 5 },
-        }}
-      >
-        <Grid item size={{ xs: 12, md: 6 }}>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: 700, mb: 3, color: "#0D3E9B", textAlign: "left" }}
-          >
-            Communication/Voice Services (Digital Land Lines)
+    <Box sx={{ py: 10, display: "flex", justifyContent: "center" }}>
+      {items.map((item, idx) => (
+        <Paper
+          key={idx}
+          elevation={3}
+          sx={{
+            borderRadius: "16px",
+            p: 4,
+            backgroundColor: "#fff",
+            maxWidth: 500,
+            width: "50%",
+          }}
+        >
+          <Box sx={{ display: "flex",  mb: 2 }}>
+            <Box
+              sx={{
+                backgroundColor: "#FFF0F0",
+                width: 40,
+                height: 40,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "50%",
+                mr: 2,
+              }}
+            >
+              <DoneOutlineIcon sx={{ color: "#E10000" }} />
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: 700, color: "#0D3E9B", mb: 0, }}
+            >
+              {item.title}
+            </Typography>
+          </Box>
+          <Typography sx={{ color: "#555", fontSize: "15px", textAlign: "left" }}>
+            {item.features}
           </Typography>
-          <Typography sx={{ mb: 2 }}>
-            Our voice communication solution is tailored to meet your
-            operational and customer service needs. Our solution aims to enhance
-            communication capabilities, improve customer interactions, and
-            reduce operational costs through modern, scalable voice
-            technologies.
-          </Typography>
-          <ul>
-            <li>
-              Seamless internal and external communication with scalable VoIP
-              technology
-            </li>
-            <li>
-              Enhanced customer engagement through high-quality call clarity and
-              reliability
-            </li>
-            <li>
-              {" "}
-              Cost-effective infrastructure that reduces telecom expenses{" "}
-            </li>
-            <li>
-              Customizable call features tailored to business workflows and
-              support needs
-            </li>
-          </ul>
-        </Grid>
-
-        {/* RIGHT COLUMN - PRICING GRID */}
-        <Grid item size={{ xs: 12, md: 6 }}>
-          <img
-            src={communication}
-            alt="Communication Services"
-            style={{ borderRadius: "10px", px: { xs: 5, md: 0 }, width: "100%" }}
-          />
-        </Grid>
-      </Grid>
+        </Paper>
+      ))}
     </Box>
   );
 }

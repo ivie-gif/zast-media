@@ -1,66 +1,58 @@
 import * as React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid, Paper } from "@mui/material";
+import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 import LocalNetwork from "../../../assets/local-network.jpg";
 
 function ManagedService() {
-  return (
-    <Box
-      sx={{
-        backgroundColor: "red",
-        py: { xs: 3, md: 8 },
-        // backgroundImage: `url(${BgPricing})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        borderRadius: "10px",
-        mx: { xs: 1, md: 5 },
-        mt: { xs: 5, md: 8 },
-      }}
-    >
-      <Grid
-        container
-        spacing={2}
-        sx={{
-          px: { xs: 3, md: 10 },
-          py: { xs: 3, md: 5 },
-        }}
-      >
-        <Grid item size={{ xs: 12, md: 6 }}>
-          <Typography
-            variant="h5"
-            sx={{ fontWeight: 700, mb: 3, color: "#0D3E9B", textAlign: "left" }}
-          >
-            Managed IT Services:
-          </Typography>
-          <Typography sx={{ mb: 2 }}>
-            Whether you're setting up a new office or upgrading your existing
-            network, we provide seamless, stress-free local network setup
-            tailored to your business needs. Backed by years of experience, our
-            certified technicians deliver enterprise-grade networking solutions
-            at a reasonable cost. We also offer custom Wi-Fi solutions—starting
-            with a detailed assessment of your workspace, we ensure strong,
-            reliable connectivity by fine-tuning every connection.
-          </Typography>
-          <ul>
-            <li>Local Network Setup</li>
-            <li>Wi-Fi Solutions</li>
-            <li>IT Consultancy</li>
-          </ul>
-        </Grid>
+  const items = [
+    {
+      title: "Managed IT Services",
+      features:
+        " We are offering the following digital automated solutions: SMS, USSD and Short codes (Bulk sms solutions). The Bulk SMS solutions will integrate with the existing systems to eliminate human interaction and also provide a means of growing contact database through a two-way communication channel"
+    },
+  ];
 
-        {/* RIGHT COLUMN - PRICING GRID */}
-        <Grid item size={{ xs: 12, md: 6 }}>
-          <img
-            src={LocalNetwork}
-            alt="Local Network"
-            style={{
-              borderRadius: "10px",
-              px: { xs: 5, md: 0 },
-              width: "100%",
-            }}
-          />
-        </Grid>
-      </Grid>
+  return (
+    <Box sx={{ py: 10, display: "flex", justifyContent: "center" }}>
+      {items.map((item, idx) => (
+        <Paper
+          key={idx}
+          elevation={3}
+          sx={{
+            borderRadius: "16px",
+            p: 4,
+            backgroundColor: "#fff",
+            maxWidth: 500,
+            width: "50%",
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+            <Box
+              sx={{
+                backgroundColor: "#FFF0F0",
+                width: 40,
+                height: 40,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "50%",
+                mr: 2,
+              }}
+            >
+              <DoneOutlineIcon sx={{ color: "#E10000" }} />
+            </Box>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: 700, color: "#0D3E9B", mb: 0, textAlign: "left" }}
+            >
+              {item.title}
+            </Typography>
+          </Box>
+          <Typography sx={{ color: "#555", fontSize: "15px", textAlign: "left" }}>
+            {item.features}
+          </Typography>
+        </Paper>
+      ))}
     </Box>
   );
 }

@@ -20,7 +20,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Services",  "Contact"];
+const navItems = ["Home", "About", "Services", "Contact"];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -52,8 +52,8 @@ function DrawerAppBar(props) {
               <ListItemText
                 primary={item}
                 sx={{
-                  color: "#2A2A2A",
-                  "&:hover": { color: "#78BBED" },
+                  color: "#000",
+                  "&:hover": { color: "#E10000" },
                 }}
               />
             </ListItemButton>
@@ -88,11 +88,14 @@ function DrawerAppBar(props) {
         {/* Desktop view of the Navbar */}
         <AppBar
           component="nav"
-          sx={{ backgroundColor: "rgb(255, 255, 255)", py: 2 }}
+          sx={{ 
+            backgroundColor: "rgb(255, 255, 255)",
+             py: 2 }}
         >
           <Box
             sx={{
-              backgroundColor: "#EFEFEF",
+              // backgroundColor: "#EFEFEF",
+              backgroundColor: "#F5F5F5",
               height: { xs: "12vh", md: "7vh" },
               mt: -2,
               px: 2,
@@ -109,11 +112,15 @@ function DrawerAppBar(props) {
                 <Box sx={{ display: "flex", flexDirection: "row", gap: 4 }}>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                     <EmailIcon sx={{ fontSize: 18, color: "#E10000" }} />
-                    <Typography variant="body2" sx={{ color: "#0D3E9B" }}>info@zastmedia.net</Typography>
+                    <Typography variant="body2" sx={{ color: "#000000" }}>
+                      info@zastmedia.net
+                    </Typography>
                   </Box>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                     <PhoneIcon sx={{ fontSize: 18, color: "#E10000" }} />
-                    <Typography variant="body2" sx={{ color: "#0D3E9B" }}>08098276352</Typography>
+                    <Typography variant="body2" sx={{ color: "#000000" }}>
+                      08098276352
+                    </Typography>
                   </Box>
                 </Box>
               </Grid>
@@ -126,8 +133,8 @@ function DrawerAppBar(props) {
               >
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                   <LocationOnIcon sx={{ fontSize: 18, color: "#E10000" }} />
-                  <Typography variant="body2" sx={{ color: "#0D3E9B" }}>
-                  16 Floor, 8-10 Broad Street, Marina, Lagos, Nigeria
+                  <Typography variant="body2" sx={{ color: "#000000" }}>
+                    16 Floor, 8-10 Broad Street, Marina, Lagos, Nigeria
                   </Typography>
                 </Box>
               </Grid>
@@ -141,7 +148,7 @@ function DrawerAppBar(props) {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: "none" } }}
             >
-              <MenuIcon sx={{ color: "#0D3E9B" }} />
+              <MenuIcon sx={{ color: "#000000" }} />
             </IconButton>
             <Typography
               variant="h6"
@@ -159,25 +166,25 @@ function DrawerAppBar(props) {
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
                 <Button
-                  key={item}
-                  sx={{
-                    color: "#0D3E9B",
-                    "&:hover": { color: "#E10000" },
-                    px: 2,
-                    textAlign: "center",
-                  }}
-                >
-                  {item}
-                </Button>
+                key={item}
+                sx={{
+                  color: "#000000",
+                  "&:hover": { color: "#E10000" },
+                  px: 2,
+                  textAlign: "center",
+                }}
+              >
+                {item}
+              </Button>
               ))}
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" }, mx: 5 }}>
               <Button
                 sx={{
-                  color: "#0D3E9B",
-                  border: "2px solid #0D3E9B",
+                  color: "#E10000",
+                  border: "2px solid #E10000",
                   borderRadius: "20px",
-                  "&:hover": { backgroundColor: "#0D3E9B", color: "#ffffff" },
+                  "&:hover": { backgroundColor: "#E10000", color: "#ffffff" },
                   px: 2,
                   textAlign: "center",
                 }}

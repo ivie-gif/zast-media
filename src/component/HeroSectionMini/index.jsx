@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import HomeWorkIcon from "@mui/icons-material/HomeWork";
-import FooterImage from "../../assets/footer.png";
+import FooterNewImage from "../../assets/footer-new.png";
 
 function HeroMini() {
   return (
@@ -19,7 +19,9 @@ function HeroMini() {
         <Grid
           size={{ xs: 12, md: 4 }}
           sx={{
-            background: `url(${FooterImage})`,
+            background: `url(${FooterNewImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
             height: { xs: "12vh", md: "10vh" },
             zIndex: 999,
             mt: { xs: -3, md: "-40px" },
@@ -30,7 +32,7 @@ function HeroMini() {
             <Box sx={{ pl: { xs: 3, md: 10 } }}>
               <HomeIcon
                 sx={{
-                  color: "#0D3E9B",
+                  color: "#E10000",
                   backgroundColor: "#fff",
                   width: "30px",
                   height: "30px",
@@ -59,7 +61,9 @@ function HeroMini() {
         <Grid
           size={{ xs: 12, md: 4 }}
           sx={{
-            background: `url(${FooterImage})`,
+            background: `url(${FooterNewImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
             height: { xs: "12vh", md: "10vh" },
             zIndex: 999,
             mt: { xs: -3, md: "-40px" },
@@ -71,7 +75,7 @@ function HeroMini() {
             <Box sx={{ pl: { xs: 3, md: 10 } }}>
               <AddBusinessIcon
                 sx={{
-                  color: "#0D3E9B",
+                  color: "#E10000",
                   backgroundColor: "#fff",
                   width: "30px",
                   height: "30px",
@@ -100,7 +104,9 @@ function HeroMini() {
         <Grid
           size={{ xs: 12, md: 4 }}
           sx={{
-            background: `url(${FooterImage})`,
+            background: `url(${FooterNewImage})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
             height: { xs: "12vh", md: "10vh" },
             zIndex: 999,
             mt: { xs: -3, md: "-40px" },
@@ -112,7 +118,7 @@ function HeroMini() {
             <Box sx={{ pl: { xs: 3, md: 10 } }}>
               <HomeWorkIcon
                 sx={{
-                  color: "#0D3E9B",
+                  color: "#E10000",
                   backgroundColor: "#fff",
                   width: "30px",
                   height: "30px",

@@ -9,6 +9,7 @@ import Faq from "../Faq";
 import Footer from "../Footer";
 import Contact from "../Contact";
 import Location from "../Location";
+import Pricing from "../Pricing";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
       <About />
       <ChooseSection />
       <Services />
+      <Pricing />
       <Faq />
       <Location />
       <Contact />

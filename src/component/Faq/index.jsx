@@ -1,155 +1,97 @@
 import * as React from "react";
-import { Box, Typography, Divider, Grid } from "@mui/material";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
+import {
+  Box,
+  Typography,
+  Divider,
+  Grid,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 function Faq() {
   const faqs = [
     {
-      question: "question 1",
-      answers: "answer 1",
+      question: "What services does Zast Media provide?",
+      answers: "We offer fiber internet, VoIP telephony, Wi-Fi setup, and more tailored IT solutions.",
     },
     {
-      question: "question 2",
-      answers: "answer 2",
+      question: "Do you provide services to residential areas?",
+      answers: "Yes, we serve both residential and business clients with dedicated internet and support.",
     },
     {
-      question: "question 3",
-      answers: "answer 3",
+      question: "Can I upgrade my plan anytime?",
+      answers: "Absolutely! You can contact our support team to upgrade or scale your current plan.",
     },
     {
-      question: "question 4",
-      answers: "answer 4",
+      question: "What support options are available?",
+      answers: "We provide 24/7 customer support via phone, email, and live chat.",
     },
     {
-      question: "question 5",
-      answers: "answer 5",
+      question: "Is Zast Media available outside Lagos?",
+      answers: "Our core operations are in Lagos, but we're expanding to other regions. Stay tuned!",
     },
     {
-      question: "question 6",
-      answers: "answer 6",
+      question: "How secure is the connection?",
+      answers: "Our infrastructure is built on secure fiber-optic technology with regular monitoring.",
     },
   ];
 
   return (
-    <Box sx={{ backgroundColor: "#1E1278", pt: 10, pb: 20 }}>
+    // <Box sx={{ backgroundColor: "#000000", pt: 10, pb: 20 }}>
+    <Box sx={{ backgroundColor: "#D9D9D9", pt: 10, pb: 20 }}>
       <Divider
         orientation="horizontal"
         flexItem
         sx={{
-          textAlign: "left",
           backgroundColor: "#E10000",
           width: { xs: "10%", md: "4%" },
-          height: { xs: "3px", md: "3px" },
-          //   marginTop: { xs: 10, md: 10 },
-          marginX: { xs: 4, md: 10 },
+          height: "3px",
+          mx: { xs: 4, md: 10 },
         }}
       />
       <Typography
         variant="h6"
         sx={{
           textAlign: "left",
-          marginTop: { xs: 2, md: 1 },
-          marginX: { xs: 1, md: 0 },
+          mt: { xs: 2, md: 1 },
+          mx: { xs: 3, md: 10 },
           fontSize: { xs: "25px", md: "42px" },
           fontWeight: 900,
           lineHeight: { md: "57px" },
           color: "#E10000",
-          paddingX: { xs: 3, md: 10 },
           mb: 5,
         }}
       >
         Frequently Asked Questions
       </Typography>
 
-      {/* <Box sx={{ paddingX: { xs: 3, md: 10 } }}>
-        <Accordion  sx={{backgroundColor: "#F9FAFA"}}>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1-content"
-            id="panel1-header"
-          >
-            <Typography component="span">Expanded by default</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2-content"
-            id="panel2-header"
-          >
-            <Typography component="span">Header</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2-content"
-            id="panel2-header"
-          >
-            <Typography component="span">Header</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2-content"
-            id="panel2-header"
-          >
-            <Typography component="span">Header</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-      </Box> */}
-
-      <Grid container  spacing={2} sx={{ paddingX: { xs: 3, md: 10 } }}>
-        {faqs.map((item) => {
-          return (
-            <Grid item size={{ xs: 12, md: 6 }}>
-              <Accordion sx={{backgroundColor: '#F9FAFA'}}>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls="panel1-content"
-                  id="panel1-header"
+      <Grid container spacing={2} sx={{ px: { xs: 3, md: 10 } }}>
+        {faqs.map((item, idx) => (
+          <Grid key={idx} item size={{ xs: 12, md: 6 }}>
+            <Accordion sx={{ backgroundColor: "#F5F5F5" }}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#E10000" }} />}
+                aria-controls={`panel-${idx}-content`}
+                id={`panel-${idx}-header`}
+              >
+                <Typography
+                  sx={{ fontWeight: 600, fontSize: "16px", color: "#000000" }}
                 >
-                  <Typography>{item.question}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>{item.answers}</Typography>
-                </AccordionDetails>
-              </Accordion>
-            </Grid>
-          );
-        })}
+                  {item.question}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography
+                  sx={{ fontSize: "14px", color: "#444444", lineHeight: "26px" }}
+                >
+                  {item.answers}
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

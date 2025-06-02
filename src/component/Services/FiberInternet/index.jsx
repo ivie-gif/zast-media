@@ -2,12 +2,12 @@ import * as React from "react";
 import { Box, Typography, Paper } from "@mui/material";
 import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 
-function FTTH() {
+function FiberInternet() {
   const items = [
     {
-      title: "Residential Fiber Internet – FTTH",
+      title: "Dedicated Fiber Internet – Offices",
       features:
-        "Enjoy truly unlimited internet with no data caps, blazing-fast speeds for seamless streaming and gaming, and a connection that is perfect for remote work and HD/4K content. Benefit from 24/7 customer support, the largest fibre coverage in Lagos, a network designed for multi-device smart homes, and guaranteed low latency with high bandwidth.",
+        "Get unhindered internet access with our unlimited fiber solution for your office. Enjoy free calls within user groups, flexible payment plans, upgradable bandwidth, 100% fiber optics connectivity to your office, and 24/7 network monitoring and support for guaranteed reliability.",
     },
   ];
 
@@ -56,4 +56,4 @@ function FTTH() {
   );
 }
 
-export default FTTH;
+export default FiberInternet;
