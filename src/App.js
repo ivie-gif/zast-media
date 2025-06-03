@@ -4,7 +4,7 @@ import { Box } from "@mui/material";
 
 function App() {
   return (
-    <Box className="App">
+    <Box className="App" id="/">
       <Home />
     </Box>
   );

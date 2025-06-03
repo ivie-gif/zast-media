@@ -19,13 +19,35 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Logo from "../../assets/logo.png";
+// import { smoothScroll } from "../../utils/smoothScroll";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Services", "Contact"];
+// const navItems = ["Home", "About", "Services", "Pricing", "Contact"];
+
+const navItems = [
+  { label: "Home", id: "/" },
+  { label: "About", id: "about" },
+  { label: "Services", id: "services" },
+  { label: "Pricing", id: "pricing" },
+  { label: "Contact", id: "contact" },
+];
+
 
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
+  const handleNavClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setMobileOpen(false);
+     
+    }
+  };
+  
+
+
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -44,10 +66,10 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "left" }}>
+          <ListItem key={item.id} disablePadding>
+            <ListItemButton onClick={() => handleNavClick(item.id)} sx={{ textAlign: "left" }}>
               <ListItemText
-                primary={item}
+                primary={item.label}
                 sx={{
                   color: "#000",
                   ml: 2,
@@ -57,7 +79,6 @@ function DrawerAppBar(props) {
             </ListItemButton>
           </ListItem>
         ))}
-        {/* <Divider sx={{ border: "1px solid #777" , width: "100%" }} /> */}
       </List>
       <Box sx={{ display: { xs: "block", sm: "block" }, mx: 4 }}>
         <Button
@@ -82,9 +103,6 @@ function DrawerAppBar(props) {
   return (
     <Box>
       <Box sx={{ display: "flex", justifyContent: "space-evenly" }}>
-        {/* <CssBaseline /> */}
-
-        {/* Desktop view of the Navbar */}
         <AppBar
           component="nav"
           sx={{
@@ -94,7 +112,6 @@ function DrawerAppBar(props) {
         >
           <Box
             sx={{
-              // backgroundColor: "#EFEFEF",
               backgroundColor: "#F5F5F5",
               height: { xs: "12vh", md: "7vh" },
               mt: -2,
@@ -147,8 +164,7 @@ function DrawerAppBar(props) {
                 pt: { xs: 1, md: 1 },
                 display: { xs: "block", sm: "block" },
                 textAlign: "left",
-                color: "#0D3E9B",
-                "&:hover": { color: "#E10000" },
+                ml: { xs: 0, md: 5 },
               }}
             >
               <img
@@ -172,7 +188,8 @@ function DrawerAppBar(props) {
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
                 <Button
-                  key={item}
+                  key={item.id}
+                  onClick={() => handleNavClick(item.id)}
                   sx={{
                     color: "#000000",
                     "&:hover": { color: "#E10000" },
@@ -180,7 +197,7 @@ function DrawerAppBar(props) {
                     textAlign: "center",
                   }}
                 >
-                  {item}
+                  {item.label}
                 </Button>
               ))}
             </Box>

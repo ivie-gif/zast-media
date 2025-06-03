@@ -10,6 +10,7 @@ import Footer from "../Footer";
 import Contact from "../Contact";
 import Location from "../Location";
 import Pricing from "../Pricing";
+// import {smoothScroll} from "../../utils/smoothScroll";
 
 function Home() {
   return (
@@ -17,13 +18,21 @@ function Home() {
       <Navbar />
       <HeroSection />
       <HeroMini />
-      <About />
+      <Box id="about">
+        <About />
+      </Box>
       <ChooseSection />
-      <Services />
-      <Pricing />
+      <Box id="services">
+        <Services />
+      </Box>
+      <Box id="pricing">
+        <Pricing />
+      </Box>
       <Faq />
       <Location />
-      <Contact />
+      <Box id="contact">
+        <Contact />
+      </Box>
       <Footer />
     </Box>
   );

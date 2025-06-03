@@ -80,6 +80,12 @@ function About() {
                 display: "flex",
                 alignItems: "center",
               }}
+              onClick={() => {
+                const el = document.getElementById("services");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
             >
               <Typography
                 sx={{
