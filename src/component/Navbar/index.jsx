@@ -20,7 +20,6 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Logo from "../../assets/logo.png";
 
-
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Services", "Contact"];
 
@@ -40,7 +39,7 @@ function DrawerAppBar(props) {
           mx: 2,
         }}
       >
-        <img src={Logo} alt="logo" loading="lazy" width={80} height={70}/>
+        <img src={Logo} alt="logo" loading="lazy" width={80} height={70} />
       </Box>
       <Divider />
       <List>
@@ -51,20 +50,22 @@ function DrawerAppBar(props) {
                 primary={item}
                 sx={{
                   color: "#000",
+                  ml: 2,
                   "&:hover": { color: "#E10000" },
                 }}
               />
             </ListItemButton>
           </ListItem>
         ))}
+        {/* <Divider sx={{ border: "1px solid #777" , width: "100%" }} /> */}
       </List>
-      <Box sx={{ display: { xs: "none", sm: "block" }, mx: 5 }}>
+      <Box sx={{ display: { xs: "block", sm: "block" }, mx: 4 }}>
         <Button
           sx={{
-            color: "#78BBED",
-            border: "1px solid #78BBED",
+            color: "#E10000",
+            border: "2px solid #E10000",
             borderRadius: "20px",
-            "&:hover": { backgroundColor: "#78BBED", color: "#ffffff" },
+            "&:hover": { backgroundColor: "#E10000", color: "#ffffff" },
             px: 2,
             textAlign: "center",
           }}
@@ -86,9 +87,10 @@ function DrawerAppBar(props) {
         {/* Desktop view of the Navbar */}
         <AppBar
           component="nav"
-          sx={{ 
+          sx={{
             backgroundColor: "rgb(255, 255, 255)",
-             py: 2 }}
+            py: 2,
+          }}
         >
           <Box
             sx={{
@@ -139,40 +141,47 @@ function DrawerAppBar(props) {
             </Grid>
           </Box>
           <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon sx={{ color: "#000000" }} />
-            </IconButton>
             <Box
               sx={{
                 flexGrow: 1,
-                pt: { xs: 2, md: 1 },
+                pt: { xs: 1, md: 1 },
                 display: { xs: "block", sm: "block" },
                 textAlign: "left",
                 color: "#0D3E9B",
                 "&:hover": { color: "#E10000" },
               }}
             >
-              <img src={Logo} alt="logo" loading="lazy" width={80} height={70}/>
+              <img
+                src={Logo}
+                alt="logo"
+                loading="lazy"
+                width={60}
+                height={60}
+              />
             </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" }, textAlign: "right" }}
+            >
+              <MenuIcon sx={{ color: "#E10000", textAlign: "right" }} />
+            </IconButton>
+
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
                 <Button
-                key={item}
-                sx={{
-                  color: "#000000",
-                  "&:hover": { color: "#E10000" },
-                  px: 2,
-                  textAlign: "center",
-                }}
-              >
-                {item}
-              </Button>
+                  key={item}
+                  sx={{
+                    color: "#000000",
+                    "&:hover": { color: "#E10000" },
+                    px: 2,
+                    textAlign: "center",
+                  }}
+                >
+                  {item}
+                </Button>
               ))}
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" }, mx: 5 }}>

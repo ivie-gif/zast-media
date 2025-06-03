@@ -55,7 +55,7 @@ function ChooseSection() {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                mx: { xs: 3, md: 25 },
+                mx: { xs: 'auto', md: 25 },
               }}
             >
               <img src={Fiber} alt="fiber" loading="lazy" />

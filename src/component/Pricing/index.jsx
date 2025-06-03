@@ -53,14 +53,11 @@ const Pricing = [
 ];
 
 function NewPricingSection() {
+  const [open, setOpen] = React.useState(false);
 
-const [open, setOpen] = React.useState(false);
-
-
-const handleModal = () => {
-  setOpen(true);
-}
-
+  const handleModal = () => {
+    setOpen(true);
+  };
 
   return (
     <Box
@@ -105,7 +102,7 @@ const handleModal = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundColor: "#777",
-              color: "#fff",
+              color: { xs: "#fff", md: "#fff" },
               borderRadius: "16px",
               height: "100%",
               display: "flex",
@@ -115,18 +112,30 @@ const handleModal = () => {
             }}
           >
             <Box sx={{ p: 4 }}>
-              <Typography variant="h6" fontWeight={600} mb={2}>
+              <Typography
+                variant="h6"
+                fontWeight={{ xs: 700, md: 600 }}
+                mb={2}
+                sx={{ color: { xs: "#000000", md: "#fff" } }}
+              >
                 Simple pricing,
                 <br />
                 <Box component="span" fontWeight={700}>
                   No hidden charges
                 </Box>
               </Typography>
-              <Typography fontSize={14} mb={2}>
+              <Typography
+                fontSize={{ xs: 18, md: 16 }}
+                mb={2}
+                sx={{
+                  fontWeight: { xs: 600, md: 600 },
+                  color: { xs: "#000000", md: "#fff" },
+                }}
+              >
                 With no setup or maintenance fees and one of the lowest
                 transaction charges in the industry, pay only when you get paid!
               </Typography>
-              <ArrowForwardIcon sx={{ fontSize: 30 }} />
+              <ArrowForwardIcon sx={{ fontSize: 30,  }} />
             </Box>
           </Box>
         </Grid>
@@ -157,14 +166,28 @@ const handleModal = () => {
                     {item.subtitle}
                   </Typography>
                   <Divider sx={{ borderColor: "#333", mb: 2 }} />
-                  <Typography variant="body2" sx={{pb: 1}}>{item.mbps}</Typography>
-                  <Typography variant="body2" sx={{pb: 1}}>{item.price}</Typography>
-                  <Typography variant="body2" sx={{pb: 1}}>{item.lines}</Typography>
-                  <Typography variant="body2" sx={{pb: 1}}>{item.days}</Typography>
-                  <Typography variant="body2" sx={{pb: 1}}>{item.ip}</Typography>
-                  <Typography variant="body2" sx={{pb: 1}}>{item.calls}</Typography>
-                  <Typography variant="body2" sx={{pb: 1}}>{item.care}</Typography>
-                 
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.mbps}
+                  </Typography>
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.price}
+                  </Typography>
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.lines}
+                  </Typography>
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.days}
+                  </Typography>
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.ip}
+                  </Typography>
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.calls}
+                  </Typography>
+                  <Typography variant="body2" sx={{ pb: 1 }}>
+                    {item.care}
+                  </Typography>
+
                   <Button
                     fullWidth
                     variant="contained"
