@@ -14,28 +14,59 @@ import CenteredPageLayout from "../Layout";
 function Faq() {
   const faqs = [
     {
-      question: "What services does Zast Media provide?",
-      answers: "We offer fiber internet, VoIP telephony, Wi-Fi setup, and more tailored IT solutions.",
+      question: "Do we have coverage on the mainland and Island?",
+      answers:
+        "The first step is to contact us for a free site survey, the survey could be physical or remote. After this is accomplished, we can provide you with all available options to guarantee that you obtain a quality service.",
     },
     {
-      question: "Do you provide services to residential areas?",
-      answers: "Yes, we serve both residential and business clients with dedicated internet and support.",
+      question: "Do you have coverage at this location?",
+      answers:
+        "The first step is to contact us for a free site survey, the survey could be physical or remote. After this is accomplished, we can provide you with all available options to guarantee that you obtain a quality service.",
     },
     {
-      question: "Can I upgrade my plan anytime?",
-      answers: "Absolutely! You can contact our support team to upgrade or scale your current plan.",
+      question: "Do you offer internet for Estate?",
+      answers:
+        "Yes",
     },
     {
-      question: "What support options are available?",
-      answers: "We provide 24/7 customer support via phone, email, and live chat.",
+      question: "Why should leave my current Internet provider and consider Zastmedia?",
+      answers:
+        "We deliver ultra-fast reliable dedicated internet services through our 100% state- of- the -art - fiber optic network(FOS) which guarantee Bandwidth and Symmetrical Speeds, High Reliability, Stability and premium experience, Low Latency and Better Response Times, Scalability and Flexibility.",
     },
     {
-      question: "Is Zast Media available outside Lagos?",
-      answers: "Our core operations are in Lagos, but we're expanding to other regions. Stay tuned!",
+      question: "Is your Internet unlimited?",
+      answers:
+        "Yes, we sell bandwidth with unlimited internet.",
     },
     {
-      question: "How secure is the connection?",
-      answers: "Our infrastructure is built on secure fiber-optic technology with regular monitoring.",
+      question: "Do we offer Voice Solution?",
+      answers:
+        "Yes, both E1-PRI and SIP Trunk",
+    },
+    {
+      question: "Do we offer SMS Solution?",
+      answers:
+        "Yes",
+    },
+    {
+      question: "Are you a licensed ISP?",
+      answers:
+        "Yes",
+    },
+    {
+      question: "Wondering if we offer other services aside from internet?",
+      answers:
+        "Yes, we offer other services such as Managed Services/IT consultancy, Local Network Setup, Wi-Fi Solutions.",
+    },
+    {
+      question: "Is your internet shared or dedicated?",
+      answers:
+        "Dedicated",
+    },
+    {
+      question: "Is there available 24/7 Technical support?",
+      answers:
+        "Yes",
     },
   ];
 
@@ -84,7 +115,11 @@ function Faq() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography
-                  sx={{ fontSize: "14px", color: "#444444", lineHeight: "26px" }}
+                  sx={{
+                    fontSize: "14px",
+                    color: "#444444",
+                    lineHeight: "26px",
+                  }}
                 >
                   {item.answers}
                 </Typography>

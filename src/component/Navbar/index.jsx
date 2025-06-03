@@ -18,7 +18,8 @@ import { Grid } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import Logo from "../../assets/logo.png";
+// import Logo from "../../assets/logo.png";
+import Logo from "../../assets/LOGO-ZAST.jpg";
 // import { smoothScroll } from "../../utils/smoothScroll";
 
 const drawerWidth = 240;
@@ -61,7 +62,7 @@ function DrawerAppBar(props) {
           mx: 2,
         }}
       >
-        <img src={Logo} alt="logo" loading="lazy" width={80} height={70} />
+        <img src={Logo} alt="logo" loading="lazy" width={100} height={70} />
       </Box>
       <Divider />
       <List>
@@ -171,8 +172,9 @@ function DrawerAppBar(props) {
                 src={Logo}
                 alt="logo"
                 loading="lazy"
-                width={60}
-                height={60}
+                width={100}
+                height={70}
+                // style={{border: "1px solid #E10000"}}
               />
             </Box>
             <IconButton
