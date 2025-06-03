@@ -9,7 +9,6 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import CenteredPageLayout from "../Layout";
 
 function Faq() {
   const faqs = [
@@ -25,33 +24,29 @@ function Faq() {
     },
     {
       question: "Do you offer internet for Estate?",
-      answers:
-        "Yes",
+      answers: "Yes, we offer internet for estates.",
     },
     {
-      question: "Why should leave my current Internet provider and consider Zastmedia?",
+      question:
+        "Why should leave my current Internet provider and consider Zastmedia?",
       answers:
         "We deliver ultra-fast reliable dedicated internet services through our 100% state- of- the -art - fiber optic network(FOS) which guarantee Bandwidth and Symmetrical Speeds, High Reliability, Stability and premium experience, Low Latency and Better Response Times, Scalability and Flexibility.",
     },
     {
       question: "Is your Internet unlimited?",
-      answers:
-        "Yes, we sell bandwidth with unlimited internet.",
+      answers: "Yes, we sell bandwidth with unlimited internet.",
     },
     {
       question: "Do we offer Voice Solution?",
-      answers:
-        "Yes, both E1-PRI and SIP Trunk",
+      answers: "Yes, both E1-PRI and SIP Trunk",
     },
     {
       question: "Do we offer SMS Solution?",
-      answers:
-        "Yes",
+      answers: "Yes, we offer SMS Solution.",
     },
     {
       question: "Are you a licensed ISP?",
-      answers:
-        "Yes",
+      answers: "Yes, we are a licensed ISP.",
     },
     {
       question: "Wondering if we offer other services aside from internet?",
@@ -60,13 +55,15 @@ function Faq() {
     },
     {
       question: "Is your internet shared or dedicated?",
-      answers:
-        "Dedicated",
+      answers: "Dedicated internet connection.",
     },
     {
       question: "Is there available 24/7 Technical support?",
-      answers:
-        "Yes",
+      answers: "Yes, we offer 24/7 technical support.",
+    },
+    {
+      question: "How long does the installation process takes?",
+      answers: "The installation process takes 7 working days.",
     },
   ];
 

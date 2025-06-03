@@ -23,7 +23,6 @@ import Logo from "../../assets/LOGO-ZAST.jpg";
 // import { smoothScroll } from "../../utils/smoothScroll";
 
 const drawerWidth = 240;
-// const navItems = ["Home", "About", "Services", "Pricing", "Contact"];
 
 const navItems = [
   { label: "Home", id: "/" },
@@ -42,13 +41,11 @@ function DrawerAppBar(props) {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
-      setMobileOpen(false);
+      // setMobileOpen(false);
      
     }
   };
   
-
-
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -83,6 +80,12 @@ function DrawerAppBar(props) {
       </List>
       <Box sx={{ display: { xs: "block", sm: "block" }, mx: 4 }}>
         <Button
+        onClick={() => {
+          const el = document.getElementById("contact");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }}
           sx={{
             color: "#E10000",
             border: "2px solid #E10000",
@@ -205,6 +208,12 @@ function DrawerAppBar(props) {
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" }, mx: 5 }}>
               <Button
+               onClick={() => {
+                const el = document.getElementById("contact");
+                if (el) {
+                  el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}
                 sx={{
                   color: "#E10000",
                   border: "2px solid #E10000",
