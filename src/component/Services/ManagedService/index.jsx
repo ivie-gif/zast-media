@@ -8,7 +8,7 @@ function ManagedService() {
     {
       title: "Managed IT Services",
       features:
-        " We are offering the following digital automated solutions: SMS, USSD and Short codes (Bulk sms solutions). The Bulk SMS solutions will integrate with the existing systems to eliminate human interaction and also provide a means of growing contact database through a two-way communication channel"
+        "We are offering the following digital automated solutions: SMS, USSD and Short codes (Bulk SMS solutions). The Bulk SMS solutions will integrate with the existing systems to eliminate human interaction and also provide a means of growing contact database through a two-way communication channel designed to improve efficiency and ensure timely delivery of information.",
     },
   ];
 
@@ -21,6 +21,7 @@ function ManagedService() {
           sx={{
             borderRadius: "16px",
             p: 4,
+            pb: { xs: 3.5, sm: 4.5, md: 6.5, lg: 6.5 },
             backgroundColor: "#fff",
             maxWidth: 500,
             width: "50%",
@@ -44,12 +45,19 @@ function ManagedService() {
             </Box>
             <Typography
               variant="h6"
-              sx={{ fontWeight: 700, color: "#000000", mb: 0, textAlign: "left" }}
+              sx={{
+                fontWeight: 700,
+                color: "#000000",
+                mb: 0,
+                textAlign: "left",
+              }}
             >
               {item.title}
             </Typography>
           </Box>
-          <Typography sx={{ color: "#555", fontSize: "15px", textAlign: "left" }}>
+          <Typography
+            sx={{ color: "#555", fontSize: "15px", textAlign: "left" }}
+          >
             {item.features}
           </Typography>
         </Paper>

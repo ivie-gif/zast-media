@@ -116,6 +116,7 @@ function Faq() {
                     fontSize: "14px",
                     color: "#444444",
                     lineHeight: "26px",
+                    textAlign: 'left'
                   }}
                 >
                   {item.answers}

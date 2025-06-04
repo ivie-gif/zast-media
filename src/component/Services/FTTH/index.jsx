@@ -23,6 +23,7 @@ function FTTH() {
             backgroundColor: "#fff",
             maxWidth: 500,
             width: "50%",
+            height: "100%",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>

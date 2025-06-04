@@ -98,7 +98,8 @@ function NewPricingSection() {
         <Grid item size={{ xs: 12, md: 4 }}>
           <Box
             sx={{
-              backgroundImage: `url(${Money})`,
+              // backgroundImage: `url(${Money})`,
+              background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Money})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundColor: "#777",
@@ -116,12 +117,12 @@ function NewPricingSection() {
                 variant="h6"
                 fontWeight={{ xs: 700, md: 600 }}
                 mb={2}
-                sx={{ color: { xs: "#000000", md: "#fff" } }}
+                sx={{ color: { xs: "#fff", md: "#fff" } }}
               >
-                Simple pricing,
+                Enjoy transparent billing
                 <br />
                 <Box component="span" fontWeight={700}>
-                  No hidden charges
+                Hassle-Free
                 </Box>
               </Typography>
               <Typography
@@ -129,13 +130,13 @@ function NewPricingSection() {
                 mb={2}
                 sx={{
                   fontWeight: { xs: 600, md: 600 },
-                  color: { xs: "#000000", md: "#fff" },
+                  color: { xs: "#fff", md: "#fff" },
                 }}
               >
-                With no setup or maintenance fees and one of the lowest
-                transaction charges in the industry, pay only when you get paid!
+                With one of the most competitive rates in the telecom industry,
+                you only pay for the services you use—nothing more, nothing less.
               </Typography>
-              <ArrowForwardIcon sx={{ fontSize: 30,  }} />
+              <ArrowForwardIcon sx={{ fontSize: 30 }} />
             </Box>
           </Box>
         </Grid>
@@ -146,7 +147,7 @@ function NewPricingSection() {
             {Pricing.map((item) => (
               <Grid
                 item
-                size={{ xs: 12, md: 4 }}
+                size={{ xs: 12, md: 6 }}
                 key={item.title}
                 sx={{ mb: 8 }}
               >
@@ -154,9 +155,10 @@ function NewPricingSection() {
                   sx={{
                     backgroundColor: "#111",
                     borderRadius: "16px",
-                    p: 3,
+                    py: 3,
                     color: "#fff",
                     height: "100%",
+                    width: { xs: "100%", md: "85%" },
                   }}
                 >
                   <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
@@ -189,7 +191,6 @@ function NewPricingSection() {
                   </Typography>
 
                   <Button
-                    fullWidth
                     variant="contained"
                     onClick={handleModal}
                     sx={{

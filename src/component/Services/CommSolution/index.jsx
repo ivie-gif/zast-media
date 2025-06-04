@@ -5,10 +5,9 @@ import DoneOutlineIcon from "@mui/icons-material/DoneOutline";
 function CommunicationServices() {
   const items = [
     {
-      title: "Communication & Voice Services (Digital Land Lines)",
+      title: "Voice Services (Digital Land Lines)",
       features:
-        "Our voice communication solution is tailored to meet your operational and customer service needs. Our solution aims to enhance communication capabilities, improve customer interactions, and reduce operational costs through modern, scalable voice technologies."
-       },
+        "Our voice communication solution is tailored to meet your operational and customer service needs. Our solution aims to enhance communication capabilities, improve customer interactions, and reduce operational costs through modern, scalable voice technologies. It is built to deliver crystal-clear call quality."},
   ];
 
   return (
@@ -20,12 +19,14 @@ function CommunicationServices() {
           sx={{
             borderRadius: "16px",
             p: 4,
+            pb: { xs: 4, sm: 4, md: 6, lg: 7 },
             backgroundColor: "#fff",
             maxWidth: 500,
             width: "50%",
+            height: "100%",
           }}
         >
-          <Box sx={{ display: "flex",  mb: 2 }}>
+          <Box sx={{ display: "flex",  mb: 2,  }}>
             <Box
               sx={{
                 backgroundColor: "#FFF0F0",
@@ -43,7 +44,7 @@ function CommunicationServices() {
             </Box>
             <Typography
               variant="h6"
-              sx={{ fontWeight: 700, color: "#000000", mb: 0, }}
+              sx={{ fontWeight: 700, color: "#000000", mb: 0, textAlign: "left" }}
             >
               {item.title}
             </Typography>

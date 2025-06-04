@@ -18,9 +18,7 @@ import { Grid } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-// import Logo from "../../assets/logo.png";
 import Logo from "../../assets/LOGO-ZAST.jpg";
-// import { smoothScroll } from "../../utils/smoothScroll";
 
 const drawerWidth = 240;
 
@@ -32,7 +30,6 @@ const navItems = [
   { label: "Contact", id: "contact" },
 ];
 
-
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -42,10 +39,8 @@ function DrawerAppBar(props) {
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
       // setMobileOpen(false);
-     
     }
   };
-  
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -59,15 +54,23 @@ function DrawerAppBar(props) {
           mx: 2,
         }}
       >
-        <img src={Logo} alt="logo" loading="lazy" width={100} height={70} />
+        <img src={Logo} alt="logo" loading="lazy" width={150} height={70} />
       </Box>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.id} disablePadding>
-            <ListItemButton onClick={() => handleNavClick(item.id)} sx={{ textAlign: "left" }}>
+            <ListItemButton
+              disableRipple
+              onClick={() => handleNavClick(item.id)}
+              sx={{
+                textAlign: "left",
+                "&:hover": { backgroundColor: "transparent" },
+              }}
+            >
               <ListItemText
                 primary={item.label}
+                disableRipple
                 sx={{
                   color: "#000",
                   ml: 2,
@@ -80,12 +83,12 @@ function DrawerAppBar(props) {
       </List>
       <Box sx={{ display: { xs: "block", sm: "block" }, mx: 4 }}>
         <Button
-        onClick={() => {
-          const el = document.getElementById("contact");
-          if (el) {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        }}
+          onClick={() => {
+            const el = document.getElementById("contact");
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }}
           sx={{
             color: "#E10000",
             border: "2px solid #E10000",
@@ -175,9 +178,8 @@ function DrawerAppBar(props) {
                 src={Logo}
                 alt="logo"
                 loading="lazy"
-                width={100}
+                width={150}
                 height={70}
-                // style={{border: "1px solid #E10000"}}
               />
             </Box>
             <IconButton
@@ -197,7 +199,7 @@ function DrawerAppBar(props) {
                   onClick={() => handleNavClick(item.id)}
                   sx={{
                     color: "#000000",
-                    "&:hover": { color: "#E10000" },
+                    "&:hover": { color: "#fff", backgroundColor: "#E10000" },
                     px: 2,
                     textAlign: "center",
                   }}
@@ -208,12 +210,12 @@ function DrawerAppBar(props) {
             </Box>
             <Box sx={{ display: { xs: "none", sm: "block" }, mx: 5 }}>
               <Button
-               onClick={() => {
-                const el = document.getElementById("contact");
-                if (el) {
-                  el.scrollIntoView({ behavior: "smooth", block: "start" });
-                }
-              }}
+                onClick={() => {
+                  const el = document.getElementById("contact");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                }}
                 sx={{
                   color: "#E10000",
                   border: "2px solid #E10000",

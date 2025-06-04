@@ -9,8 +9,7 @@ function VAS() {
     {
       title: "VAS (Value Added Services)",
       features:
-        " We are offering the following digital automated solutions: SMS, USSD and Short codes (Bulk sms solutions). The Bulk SMS solutions will integrate with the existing systems to eliminate human interaction and also provide a means of growing contact database through a two-way communication channel"
-    },
+        "We are offering the following digital automated solutions: SMS, USSD and Short codes (Bulk SMS solutions). The Bulk SMS solutions will integrate with the existing systems to eliminate human interaction and also provide a means of growing contact database through a two-way communication channel which ensures faster communication."},
   ];
 
   return (
@@ -22,9 +21,11 @@ function VAS() {
           sx={{
             borderRadius: "16px",
             p: 4,
+            pb: { xs: 4, sm: 4, md: 6, lg: 7 },
             backgroundColor: "#fff",
             maxWidth: 500,
             width: "50%",
+            height: "100%",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>

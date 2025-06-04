@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Box, Typography, Grid, Divider } from "@mui/material";
 import LocationBG from "../../assets/lagos-location.jpg";
-import CenteredPageLayout from "../Layout";
 
 function Location() {
   const locations = [
@@ -30,7 +29,6 @@ function Location() {
         alignItems: { md: "center" },
       }}
     >
-      {/* Dark Overlay */}
       <Box
         sx={{
           position: "absolute",
@@ -43,16 +41,7 @@ function Location() {
           py: { md: 0 },
         }}
       />
-
-      {/* Content and Map */}
-      <Grid
-        container
-        spacing={10}
-        sx={{ position: "relative", zIndex: 2, px: { xs: 0, md: 25 } }}
-      >
-        {/* LEFT SIDE */}
-        <Grid item xs={12} md={8}>
-          <Box>
+          <Box sx={{ position: "relative", zIndex: 2, px: { xs: 0, md: 50 } }}>
             <Typography
               variant="h3"
               sx={{
@@ -113,34 +102,6 @@ function Location() {
               ))}
             </Grid>
           </Box>
-        </Grid>
-
-        {/* RIGHT SIDE */}
-        <Grid item xs={12} md={4}>
-          <Box
-            sx={{
-              width: { xs: "100%", md: "130%" },
-              height: { xs: "300px", md: "70vh" },
-              borderRadius: 2,
-              overflow: "hidden",
-              boxShadow: 3,
-              mb: { xs: 5, md: 0 },
-              mx: { xs: 3, md: 0 },
-            }}
-          >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31717.355831472056!2d3.3437996499999997!3d6.524379299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b3940d28e4f%3A0x7d5d6a57e235e2b0!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1717000000000!5m2!1sen!2sng"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Lagos Map"
-            ></iframe>
-          </Box>
-        </Grid>
-      </Grid>
     </Box>
   );
 }

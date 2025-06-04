@@ -52,7 +52,7 @@ function Footer() {
           <Typography>Support</Typography>
         </Grid>
       </Grid> */}
-      <Typography sx={{color: "#E10000", py: 4, textAlign: "center",}}>Copyright © 2025 Zast-Media All Rights Reserved</Typography>
+      <Typography sx={{color: "#fff", py: 4, textAlign: "center",}}>Copyright © 2025 Zast-Media All Rights Reserved.</Typography>
     </Box>
   );
 }

@@ -7,7 +7,7 @@ function FiberInternet() {
     {
       title: "Dedicated Fiber Internet – Offices",
       features:
-        "Get unhindered internet access with our unlimited fiber solution for your office. Enjoy free calls within user groups, flexible payment plans, upgradable bandwidth, 100% fiber optics connectivity to your office, and 24/7 network monitoring and support for guaranteed reliability.",
+        "Get unhindered internet access with our unlimited fiber solution for your office. Enjoy free calls within user groups, flexible payment plans, upgradable bandwidth, 100% fiber optics connectivity to your office, and 24/7 network monitoring and support for guaranteed reliability. This service is designed to keep your business operations smoothly.",
     },
   ];
 
@@ -20,9 +20,11 @@ function FiberInternet() {
           sx={{
             borderRadius: "16px",
             p: 4,
+            pb: { xs: 4, sm: 4, md: 6, lg: 7 },
             backgroundColor: "#fff",
             maxWidth: 500,
             width: "50%",
+            // height: "100%",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
