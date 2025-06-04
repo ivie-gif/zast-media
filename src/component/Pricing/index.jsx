@@ -116,7 +116,7 @@ function NewPricingSection() {
               <Typography
                 variant="h6"
                 fontWeight={{ xs: 700, md: 600 }}
-                mb={2}
+                mb={5}
                 sx={{ color: { xs: "#fff", md: "#fff" } }}
               >
                 Enjoy transparent billing

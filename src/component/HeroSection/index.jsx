@@ -30,7 +30,7 @@ function HeroSection() {
             mb: 2,
           }}
         >
-          Zast-Media
+          ZastMedia
         </Typography>
 
         <Typography
