@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Grid,
@@ -65,6 +65,48 @@ function NewPricingSection() {
 
   const handleModal = () => {
     setOpen(true);
+  };
+
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    address: "",
+    phone: "",
+    email: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch(
+      "https://formsubmit.co/ajax/info@zastmedia.net",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
+    if (response.ok) {
+      setFormSubmitted(true);
+      setTimeout(() => {
+        setFormSubmitted(false);
+        setOpen(false);
+        setFormData({ name: "", address: "", phone: "", email: "" });
+      }, 3000);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -226,60 +268,85 @@ function NewPricingSection() {
         title="Request Service to your Estate/Home or Company"
         width={500}
       >
-        <form style={{ marginTop: "10px" }}>
-          <TextField
-            label="Name or Company Name"
-            id="outlined-size-normal"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ display: "block", mb: 5 }}
-          />
-          <TextField
-            label="Home/Estate or Company Address:"
-            id="Home/Estate address:"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ display: "block", mb: 5 }}
-          />
-          <TextField
-            label="Phone Number:"
-            id="outlined-size-normal"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ display: "block", mb: 5 }}
-          />
-          <TextField
-            label="Email address:"
-            id="outlined-size-normal"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ display: "block", mb: 5 }}
-          />
+        {!formSubmitted ? (
+          <form onSubmit={handleSubmit} style={{ marginTop: "10px" }}>
+            <TextField
+              name="name"
+              label="Name or Company Name"
+              id="name"
+              variant="outlined"
+              fullWidth
+              required
+              value={formData.name}
+              onChange={handleChange}
+              sx={{ display: "block", mb: 5 }}
+            />
+            <TextField
+              name="address" // <-- REQUIRED
+              label="Home/Estate or Company Address:"
+              id="address"
+              variant="outlined"
+              fullWidth
+              required
+              value={formData.address}
+              onChange={handleChange}
+              sx={{ display: "block", mb: 5 }}
+            />
+            <TextField
+              name="phone" // <-- REQUIRED
+              label="Phone Number:"
+              id="phone"
+              variant="outlined"
+              fullWidth
+              required
+              value={formData.phone}
+              onChange={handleChange}
+              sx={{ display: "block", mb: 5 }}
+            />
+            <TextField
+              name="email" // <-- REQUIRED
+              label="Email address:"
+              id="email"
+              type="email"
+              variant="outlined"
+              fullWidth
+              required
+              value={formData.email}
+              onChange={handleChange}
+              sx={{ display: "block", mb: 5 }}
+            />
 
-          <Button
-            variant="contained"
-            onClick={handleModal}
-            sx={{
-              mt: 3,
-              px: 5,
-              py:1,
-              backgroundColor: "#E10000",
-              mx: '35%',
-              borderRadius: 2,
-              textTransform: "none",
-              fontWeight: 600,
-              "&:hover": {
-                backgroundColor: "#B00000",
-              },
-            }}
-          >
-            Submit
-          </Button>
-        </form>
+            <Button
+              type="submit"
+              variant="contained"
+              onClick={handleModal}
+              sx={{
+                mt: 3,
+                px: 5,
+                py: 1,
+                backgroundColor: "#E10000",
+                mx: "35%",
+                borderRadius: 2,
+                textTransform: "none",
+                fontWeight: 600,
+                "&:hover": {
+                  backgroundColor: "#B00000",
+                },
+              }}
+            >
+              Submit
+            </Button>
+          </form>
+        ) : (
+          <div style={{ textAlign: "center", padding: "40px 10px" }}>
+            <Typography variant="h5" sx={{ color: "#E10000", fontWeight: 600 }}>
+              Thank you!
+            </Typography>
+            <Typography variant="body1" sx={{ mt: 2 }}>
+              Your request has been received. We'll get back to you shortly.
+            </Typography>
+          </div>
+        )}
       </ReusableModal>
     </Box>
   );
