@@ -1,7 +1,14 @@
 import * as React from "react";
-import { Box, Typography, Divider, Grid, Button } from "@mui/material";
+import { Box, Typography, Divider, Grid, Button, TextField } from "@mui/material";
+import ReusableModal from "../../reusables/modal";
 
 function Contact() {
+    const [open, setOpen] = React.useState(false);
+  
+    const handleModal = () => {
+      setOpen(true);
+    };
+
   return (
     <Box
       sx={{
@@ -31,6 +38,7 @@ function Contact() {
         </Grid>
         <Grid item size={{ xs: 12, md: 4 }}>
           <Button
+          onClick={handleModal}
             sx={{
               my: 3,
               backgroundColor: "rgba(5, 5, 5, 0.85)",
@@ -49,6 +57,67 @@ function Contact() {
           </Button>
         </Grid>
       </Grid>
+      <ReusableModal
+              open={open}
+              onClose={() => setOpen(false)}
+              title="Request Service to your Estate/Home or Company"
+              width={500}
+            >
+              <form style={{ marginTop: "10px" }}>
+                <TextField
+                  label="Name or Company Name"
+                  id="outlined-size-normal"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  sx={{ display: "block", mb: 5 }}
+                />
+                <TextField
+                  label="Home/Estate or Company Address:"
+                  id="Home/Estate address:"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  sx={{ display: "block", mb: 5 }}
+                />
+                <TextField
+                  label="Phone Number:"
+                  id="outlined-size-normal"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  sx={{ display: "block", mb: 5 }}
+                />
+                <TextField
+                  label="Email address:"
+                  id="outlined-size-normal"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  sx={{ display: "block", mb: 5 }}
+                />
+      
+                <Button
+                  variant="contained"
+                  onClick={handleModal}
+                  sx={{
+                    mt: 3,
+                    px: 5,
+                    py:1,
+                    backgroundColor: "#E10000",
+                    mx: '35%',
+                    borderRadius: 2,
+                    textTransform: "none",
+                    fontWeight: 600,
+                    "&:hover": {
+                      backgroundColor: "#B00000",
+                    },
+                  }}
+                >
+                  Submit
+                </Button>
+              </form>
+            </ReusableModal>
     </Box>
   );
 }

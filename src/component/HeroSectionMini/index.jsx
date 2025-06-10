@@ -53,7 +53,7 @@ function HeroMini() {
                   ml: 2,
                 }}
               >
-                High Speed Network — Residential
+                High Speed Network — Homes
               </Typography>
             </Box>
           </Box>
@@ -96,7 +96,7 @@ function HeroMini() {
                   ml: 2,
                 }}
               >
-                High Speed Network — Businesses
+                High Speed Network — Estates
               </Typography>
             </Box>
           </Box>

@@ -1,5 +1,13 @@
 import * as React from "react";
-import { Box, Grid, Typography, Button, Divider } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  Button,
+  Divider,
+  Input,
+  TextField,
+} from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Money from "../../assets/money.jpg";
 import ReusableModal from "../../reusables/modal";
@@ -98,7 +106,6 @@ function NewPricingSection() {
         <Grid item size={{ xs: 12, md: 4 }}>
           <Box
             sx={{
-              // backgroundImage: `url(${Money})`,
               background: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Money})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -122,7 +129,7 @@ function NewPricingSection() {
                 Enjoy transparent billing
                 <br />
                 <Box component="span" fontWeight={700}>
-                Hassle-Free
+                  Hassle-Free
                 </Box>
               </Typography>
               <Typography
@@ -134,7 +141,8 @@ function NewPricingSection() {
                 }}
               >
                 With one of the most competitive rates in the telecom industry,
-                you only pay for the services you use—nothing more, nothing less.
+                you only pay for the services you use—nothing more, nothing
+                less.
               </Typography>
               <ArrowForwardIcon sx={{ fontSize: 30 }} />
             </Box>
@@ -215,10 +223,64 @@ function NewPricingSection() {
       <ReusableModal
         open={open}
         onClose={() => setOpen(false)}
-        title="Modal Title"
-        description="Optional description text here"
+        title="Request Service to your Estate/Home or Company"
         width={500}
-      />
+      >
+        <form style={{ marginTop: "10px" }}>
+          <TextField
+            label="Name or Company Name"
+            id="outlined-size-normal"
+            variant="outlined"
+            fullWidth
+            required
+            sx={{ display: "block", mb: 5 }}
+          />
+          <TextField
+            label="Home/Estate or Company Address:"
+            id="Home/Estate address:"
+            variant="outlined"
+            fullWidth
+            required
+            sx={{ display: "block", mb: 5 }}
+          />
+          <TextField
+            label="Phone Number:"
+            id="outlined-size-normal"
+            variant="outlined"
+            fullWidth
+            required
+            sx={{ display: "block", mb: 5 }}
+          />
+          <TextField
+            label="Email address:"
+            id="outlined-size-normal"
+            variant="outlined"
+            fullWidth
+            required
+            sx={{ display: "block", mb: 5 }}
+          />
+
+          <Button
+            variant="contained"
+            onClick={handleModal}
+            sx={{
+              mt: 3,
+              px: 5,
+              py:1,
+              backgroundColor: "#E10000",
+              mx: '35%',
+              borderRadius: 2,
+              textTransform: "none",
+              fontWeight: 600,
+              "&:hover": {
+                backgroundColor: "#B00000",
+              },
+            }}
+          >
+            Submit
+          </Button>
+        </form>
+      </ReusableModal>
     </Box>
   );
 }

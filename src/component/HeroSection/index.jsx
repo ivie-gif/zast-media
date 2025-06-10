@@ -45,7 +45,7 @@ function HeroSection() {
           }}
         >
           Empowering Connections, Enabling Communication
-        <CheckCircleIcon sx={{ color: "#fff", fontSize: "15px" }} />
+          <CheckCircleIcon sx={{ color: "#fff", fontSize: "15px" }} />
         </Typography>
 
         <Typography
@@ -59,10 +59,11 @@ function HeroSection() {
             mb: 2,
           }}
         >
-          Our solution aims to enhance communication capabilities, improve
-          customer interactions, and reduce operational costs through modern,
-          scalable voice technologies. Get unhindered access to the internet
-          with our unlimited fiber solution to your residents and offices.
+          Our solution is designed to enhance internet connectivity for homes,
+          estates, and offices through modern, scalable fiber optic technology.
+          We help improve customer experiences and reduce operational costs by
+          delivering fast, reliable, and unlimited internet access to your
+          residence or workplace.
         </Typography>
       </Box>
     </Box>
