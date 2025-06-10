@@ -28,6 +28,7 @@ function HeroSection() {
             fontSize: "20px",
             lineHeight: "24px",
             mb: 2,
+            textTransform: 'uppercase'
           }}
         >
           ZastMedia
